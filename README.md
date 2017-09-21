@@ -6,7 +6,7 @@ Stuttgart University, Germany
 
 GeodesicViewer Instalation on Ubuntu 16.04
 
-by: Mauricio Suárez
+by: Leonardo Castañeda , Mauricio Suárez
 
 Universidad Nacional de Colombia
 
