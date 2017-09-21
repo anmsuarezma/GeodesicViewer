@@ -49,6 +49,7 @@ GSL_DIR =home/NombreUsuario/local/include
 
 > Build-> Build All
 
+
 Por lo general se presentar "warnings" debido al debug, sin embargo si no hay problemas hasta el momento y no aparecen símbolos rojos en la parte inferior derecha, luego de que el programa termine el proceso de build, podrá dar click en "Play".
 
 Qt Creator abrirá una terminal con GeodesicViewer desde donde podrá abrir los ejemplos (archivos .ini) que se encuentran en GeodesicViewer-master-> data->Tutorial
