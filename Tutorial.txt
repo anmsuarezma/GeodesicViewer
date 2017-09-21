@@ -1,0 +1,57 @@
+Instalación Geodesic viewer para sistema Linux
+
+Debe de tener instalado gcc versión mayor a 5-0
+
+Para instalar Geodesic Viewer necesita de 3 librerías:
+1) GNU Scientific library,
+2) Qt,
+3) Motion4D library
+
+La instalación de dichas librerías se muestra a continuación:
+
+-----------------GNU SCientific library-------------------
+
+> Descargue el archivo "gsl-latest.tar.gz" del link
+http://mirror.cedia.org.ec/gnu/gsl/
+
+> Abra una terminal en la carpeta de descargas
+"tar -xf gsl-latest.tar.gz"
+"cd gsl-2.4"
+"./configure --prefix=$HOME/local"
+"sudo make -j n" --> n hace referencia a la cantidad de procesadores que desea utilizar en el proceso
+"sudo make install"
+
+---------------------------Qt-----------------------------
+> Descargue  "qt-linux-opensource-5.0.0-x86_64-offline.run" del link
+http://download.qt.io/archive/qt/5.0/5.0.0/
+
+> Abra una terminal en la carpeta de descargas
+"chmod -x qt-linux-opensource-5.0.0-x86_64-offline.run"
+"./qt-linux-opensource-5.0.0-x86_64-offline.run"
+Se abrirá un programa de instalación, siga las instrucciones
+
+---------------------Motion4D library-----------------------
+> Descargue las carpetas Motion4D y GeodesicViewer-master del link
+https://github.com/tauzero7
+
+
+
+CONFIGURACIÓN
+
+> Ingrese al directorio home/local y haga una copia de la carpeta lib en la carpeta local
+
+
+> Descargue la carpeta GEodesicViewer-Master que encontrará en este repositorio
+
+
+> Abra el archivo "gviewer_m4d.pro" (Lo encontrará en la carpeta GeodesicViewer-master) desde la aplicación Qt Creator y edítelo así:
+
+M4D_DIR = home/NombreUsuario/Documentos/GeodesicViewer-master
+GSL_DIR =home/NombreUsuario/local/include
+
+> En la pestaña "Projects" deseleccione "Shadow build"
+> Build-> Build All
+
+Por lo general se presentar "warnings" debido al debug, sin embargo si no hay problemas hasta el momento y no aparecen símbolos rojos en la parte inferior derecha, luego de que el programa termine el proceso de build, podrá dar click en "Play".
+
+Qt Creator abrirá una terminal con GeodesicViewer desde donde podrá abrir los ejemplos (archivos .ini) que se encuentran en GeodesicViewer-master-> data->Tutorial
