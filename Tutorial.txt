@@ -1,6 +1,20 @@
 Instalación Geodesic viewer para sistema Linux
 
-Debe de tener instalado gcc versión mayor a 5-0
+Debe de tener instalado gcc versión mayor a 5-0, además de eso las componentes Mesa (OpenGL).
+
+Para instalar Mesa (OpenGL) tipee en una terminal lo siguiente:
+sudo apt-get update
+sudo apt-get install freeglut3
+sudo apt-get install freeglut3-dev
+sudo apt-get install binutils-gold
+sudo apt-get install g++ cmake
+sudo apt-get install libglew-dev
+sudo apt-get install mesa-common-dev
+sudo apt-get install build-essential
+sudo apt-get install libglew1.5-dev libglm-dev
+
+---->(Tomado de http://www.wikihow.com/Install-Mesa-(OpenGL)-on-Linux-Mint)
+____________________________________________________________________________
 
 Para instalar Geodesic Viewer necesita de 3 librerías:
 1) GNU Scientific library,
@@ -37,7 +51,7 @@ Se abrirá un programa de instalación, siga las instrucciones
 
 CONFIGURACIÓN
 
-> Ingrese al directorio home/local y haga una copia de la carpeta lib en la carpeta local
+> Ingrese al directorio home/local y haga una copia de la carpeta lib en la carpeta include
 
 
 > Abra el archivo "gviewer_m4d.pro" (Lo encontrará en la carpeta GeodesicViewer-Master) desde la aplicación Qt Creator y edítelo así:
@@ -49,7 +63,6 @@ GSL_DIR =home/NombreUsuario/local/include
 
 > Build-> Build All
 
+>Por lo general se presentan "warnings" debido al debug, sin embargo si no hay problemas hasta el momento y no aparecen símbolos rojos en la parte inferior derecha, luego de que el programa termine el proceso de build, podrá dar click en "Play".
 
-Por lo general se presentar "warnings" debido al debug, sin embargo si no hay problemas hasta el momento y no aparecen símbolos rojos en la parte inferior derecha, luego de que el programa termine el proceso de build, podrá dar click en "Play".
-
-Qt Creator abrirá una terminal con GeodesicViewer desde donde podrá abrir los ejemplos (archivos .ini) que se encuentran en GeodesicViewer-master-> data->Tutorial
+>Qt Creator abrirá una terminal con GeodesicViewer desde donde podrá abrir los ejemplos (archivos .ini) que se encuentran en GeodesicViewer-master-> data->Tutorial
